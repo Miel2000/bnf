@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestController!{% endblock %}
+
+{% block body %}
+<style>
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    
+}
+
+a {
+    color:white;
+}
+
+nav {
+    width:100%;
+    position:absolute;
+    display:flex;
+    padding: 3rem 10rem; 
+    justify-content: space-between;
+  
+}
+
+.images--wrapper {
+    height: 100vh;
+
+}
+
+.images--wrapper img {
+    width: 100%;
+    position: absolute;
+    height: 110vh;
+    object-fit: contain;
+    z-index: -1;
+}
+
+.main-title {
+    position:absolute;
+    top: 25%;
+    left:30%;
+    font-size:6rem;
+    transform: translate(30%, 25%);
+}
+
+
+.content {
+    position:absolute;
+    width: 100%;
+    background: rgb(24,24,24);
+    min-height: 100vh;
+    z-index: 2;
+}
+
+.content-images {
+    transition: all 2s;
+
+    opacity:0.25;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    min-height:500px;
+    text-align:center;
+}
+
+.text {
+
+    padding: 2rem 20rem;
+    font-size:1.1rem;
+}
+
+.fade-in {
+    opacity:1;
+
+}
+
+.move-up {
+    transform: translateY(100px)
+}
+
+
+{# Media Queries #}
+
+@media only screen and (min-width: 480px) {
+    /* */
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* */
+}
+
+
+@media only screen and (min-width: 1140px) {
+    /* */
+}
+
+
+
+</style>
+
+<div class=".parallax">
+
+    <section>
+
+        <nav>
+            <a href="#" class="button">Sign up</a>
+        </nav>
+
+        <div class="images--wrapper">
+
+            <h2 class="main-title">Explore.</h2>
+            <img src="{{ asset('build/images/bnf/header/bitmap.png')}}" class="bg1" alt="" />
+            <img src="{{ asset('build/images/girl1.png')}}" class="girl" alt="" />
+            <img src="{{ asset('build/images/rock1.png')}}" class="rock" alt="" />
+
+        </div>
+
+        <div class="content">
+
+            <div class="content-images">
+
+                <div class="">
+
+                    <img class="images" src="{{ asset('build/images/switzleft.png')}}" alt="" />
+                    <h4>Switzerland</h4>
+                    <h3>Mountains of tibaboo</h3>
+
+                </div>
+
+                <div class="">
+
+                    <img  class="images" src="{{ asset('build/images/switzright.png')}}" alt="" />
+                    <h4>Switzerland</h4>
+                    <h3>Mountains of tibaboo</h3>
+
+                </div>
+
+            </div>
+
+            <p class="text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit </p>
+            <p class="text">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit </p>
+        
+        </div>
+    </section>
+
+
+
+</div>
+{% endblock %}

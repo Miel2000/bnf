@@ -1,0 +1,198 @@
+$whiteTypo: #fff;
+$redColor: #c03b54;
+
+@keyframes flecheBas {
+	0% { margin-top: 1px ;}
+	50% { margin-top: 9px ;}
+	100% { margin-top: 1px ;}
+  }
+
+.fade-out {
+	opacity:0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flexCenter {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section {
+	height:100vh;
+}
+
+.header {
+
+    width: 100vw;
+	color: $whiteTypo;
+
+	&--retour {
+		display:flex;
+
+		.Iconnavigationchevronbas {
+			transform:rotate(90deg);
+			position:relative;
+			left:0;
+			top:0;
+		}
+
+		span {
+			padding-left: 15px;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		font-size: 14px;
+		font-weight: 500;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		margin: 10vh 0 0 -150px;
+
+	}
+
+    &--image {
+        
+        img {
+			z-index:-1;
+			position:absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            object-fit:contain;
+
+        }
+    }
+
+	&--infos {
+
+		margin: 25vh 0;
+
+	
+
+		&__en-images {
+
+			span {
+				font-size: 1.2rem;
+			}
+			transition: opacity 2s;
+			text-transform: uppercase;
+			margin: 0 0 25px 1px;
+			font-size: 14px;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.43;
+			letter-spacing: normal;
+		}
+
+		&__titre {
+			font-size:6rem;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.08;
+			letter-spacing: normal;
+			
+			
+		}
+
+		&__fleche {
+
+			margin: 10vh auto;
+			background-color: $redColor;
+			border-radius:50%;
+			width:40px;
+			height:40px;
+
+			img {
+			
+				// animation-name: flecheBas;
+				animation: 2s infinite flecheBas;
+			}
+
+		}
+	}
+}
+
+
+.intro-step1 {
+	height: 300vh;
+	object-fit: contain;
+	padding-top: 15px;
+
+	.infos_recap {
+			padding-top: 10px;
+			text-align: center;
+		}
+	
+	.separateur {
+		width: 1px;
+		height: 21px;
+		margin: 0 39px 0 40px;
+		border: solid 1px #e0e0e0;
+	}
+	.chrono {
+		padding-right: 5px;
+	}
+	.Rectangle-Copy-3 {
+		width: 1104px;
+		height: 1px;
+		margin: 20px 0 0;
+		background-color: #e0e0e0;
+	}
+
+	.intro-step1--preambule {
+		border:solid 1px blue;
+
+		width: 536px;
+		margin: 74px auto;
+		position:absolute;
+		transform: translate(67%, 22%);
+		span {
+
+			font-size: 24px;
+			font-weight: 500;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.25;
+			letter-spacing: normal;
+			text-align: center;
+			color: #c72c48;
+		}
+	}
+
+	.intro-step2-images {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		border:solid 1px black;
+		position:absolute;
+
+
+
+		img {
+			width: 200px;
+				
+			&:nth-child(odd) {
+				border:solid 5px red;
+				margin: 0 0 0 85%;
+				
+			}
+			&:nth-child(even) {
+				border:solid 5px blue;
+
+			}
+		}
+	
+
+
+	
+	}
+}

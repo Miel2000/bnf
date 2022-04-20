@@ -1,0 +1,101 @@
+// body {
+//     background-color: lightgray;
+// }
+
+// .header {
+//     height:100vh;
+//     display:flex;
+//     justify-content:center;
+//     align-items:center;
+//     background:linear-gradient(to bottom, rgb(218, 214, 214), rgba(80, 80, 80, 0.822));
+//     color:white;
+// }
+
+
+// .section {
+
+
+//     &--wrapper {
+//         display:flex;
+
+//         &__about {
+
+//            height:300vh;
+//            width: 50%;
+//            height: 100vh;
+//            display:flex;
+//            justify-content: center;
+//            align-items: center;
+//            font-size:30px;
+
+//         }
+
+//         &__pages {
+
+//             width: 50%;
+
+//             div {
+//                 height: 100vh;
+//                 display:flex;
+//                 flex-direction: column;
+//                 justify-content: space-around;
+//                 align-items: center;
+
+//                 &:nth-child(1) {
+//                     background-color:rgb(129, 207, 149)
+//                 }
+
+//                 &:nth-child(2) {
+//                     background-color:rgb(100, 37, 141)
+//                 }
+
+//                 &:nth-child(3) {
+//                     background-color:rgb(224, 238, 98)
+//                 }
+
+//                 p {
+//                     width: 80%;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// footer {
+//     height: 100vh;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
+// // ____ vanilla parallax ;
+
+
+
+
+
+// figure {
+
+//     margin: 0;
+  
+  
+//     &.figure-wide {
+//       width: 100%;
+//       margin: 0;
+//       background-position: center center;
+//     }
+//   }
+
+//   .kylo-ren-1 {
+//     // @include backgrounds('images/kiloren', 'jpg', transparent, cover, 50% 50%, no-repeat);
+
+//     background:  url("https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg");
+
+  
+//     position: relative;
+//     top: 40px;
+//     height: 500px;
+//   }
+

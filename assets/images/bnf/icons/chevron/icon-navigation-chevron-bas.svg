@@ -1,0 +1,14 @@
+<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="ockytvsnla" d="M4.583 17.028 11.373 10l-6.79-7.028L6.606.833 15.416 10l-8.81 9.167z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="ji8h59j89b" fill="#fff">
+            <use xlink:href="#ockytvsnla" transform="rotate(90 10 10)"/>
+        </mask>
+        <use fill="#000" transform="rotate(90 10 10)" xlink:href="#ockytvsnla"/>
+        <g mask="url(#ji8h59j89b)" fill="#FFF">
+            <path d="M0 0h20v20H0z"/>
+        </g>
+    </g>
+</svg>

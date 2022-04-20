@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IseabloomController!{% endblock %}
+
+{% block body %}
+<style>
+ 
+</style>
+<div class="container">
+
+    {# HEADER #}
+    <section class="section--header">
+
+        <div class="header container">
+
+            <div class="header--retour">
+
+                <img src="{{ asset('build/images/bnf/icons/chevron/icon-navigation-chevron-bas.svg')}}" class="Iconnavigationchevronbas">
+                <span class="Retour-aux-Histoires">Retour aux Histoires courtes</span>
+
+            </div>
+
+            <div class="header--image">
+
+                <img class="header--image__select" src="{{ asset('build/images/bnf/header/bitmap.png')}}" />
+
+            </div>
+
+
+            <div class="header--infos col">
+
+                <div class="header--infos__en-images row">
+
+                    <span class="EN-IMAGES">en images</span>
+
+                </div>
+
+                <div class="header--infos__titre row">
+
+                    <span class="Maurice-Grin-vainqu">Maurice Garin, vainqueur du premier Tour de France</span>
+
+                </div>
+
+                <div class="header--infos__fleche row">
+
+                    <img src="{{ asset('build/images/bnf/icons/chevron/icon-navigation-chevron-bas.svg')}}" class="Iconnavigationchevronbas">
+
+                </div>
+
+                
+
+
+            </div>
+        </div>
+        
+    </section>
+
+    {# INTRO STEP 1 (Préambule) & 2 (Images à afficher) #}
+    <section class="section--intro">
+
+        <div class="intro-step1 col container center">
+
+     
+            <div class="intro-step1--infos">
+
+                <div class="infos_recap">
+
+                        <span>Par Pierre-Emmanuel Jouanneau</span>
+                        
+                        <span class="separateur"></span>
+
+                            <img class="chrono" src="{{ asset('build/images/bnf/icons/chrono/icon-contenu-time.svg')}}" class="Iconnavigationchevronbas">
+                        
+                        <span>25 min de lecture</span>
+
+                        <div class="Rectangle-Copy-3"></div>
+                </div>
+
+                <div class="intro-step1--preambule d-flex justify-content-center">
+
+                    <span>
+                        Maecenas dui erat, pulvinar nec nunc tincidunt, rhoncus molestie augue. Integer at volutpat orci. <br /> <br />
+                        Morbi eu nisi eleifend, pretium lacus ut, consectetur diam. Sed sodales venenatis posuere. Proin mollis id velit vitae posuere. Nullam commodo ante a tellus finibus hendrerit. Phasellus id tincidunt tortor.
+                    </span>
+
+                </div>
+
+                <div class="intro-step2-images">
+
+                    <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
+                    <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
+                    <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
+                    <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
+                    <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
+        
+             
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+
+    </section>
+
+</div>
+{% endblock %}
