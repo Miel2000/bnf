@@ -38,14 +38,13 @@ function headerScene() {
 	})
 	
 	.setTween(headerTimeline)
-	.addIndicators({
-		name:"Header Scene",
-		colorTrigger: 'red',
-		indent: 100,
-		colorStart: 'red'
-	})
+	// .addIndicators({
+	// 	name:"Header Scene",
+	// 	colorTrigger: 'red',
+	// 	indent: 100,
+	// 	colorStart: 'red'
+	// })
 	.addTo(controller);
-
 
 }
 
@@ -78,12 +77,12 @@ let step1Scene = new ScrollMagic.Scene({
 		})
 
 	.setTween(step1Timeline)
-	.addIndicators({
-		name:"Préambule",
-		colorTrigger: 'blue',
-		indent: 100,
-		colorStart: 'blue'
-	})
+	// .addIndicators({
+	// 	name:"Préambule",
+	// 	colorTrigger: 'blue',
+	// 	indent: 100,
+	// 	colorStart: 'blue'
+	// })
 	.addTo(controller);
 
 
@@ -94,12 +93,12 @@ let step1Scene = new ScrollMagic.Scene({
 		})
 
 	.setClassToggle(".intro-step1--preambule-text", "fade-in")
-	.addIndicators({
-		name:"Display Préambule Text",
-		colorTrigger: 'maroon',
-		indent: 100,
-		colorStart: 'maroon'
-	})
+	// .addIndicators({
+	// 	name:"Display Préambule Text",
+	// 	colorTrigger: 'maroon',
+	// 	indent: 100,
+	// 	colorStart: 'maroon'
+	// })
 	.addTo(controller);
 
 }
@@ -120,12 +119,12 @@ function pinSurPreambuleScene() {
 	
 		.setPin('.intro-step1--infos')
 		.setTween(pinSurPreambule)
-		.addIndicators({
-			name:"Pin sur Infos Top",
-			colorTrigger: 'black',
-			indent: 200,
-			colorStart: 'black'
-		})
+		// .addIndicators({
+		// 	name:"Pin sur Infos Top",
+		// 	colorTrigger: 'black',
+		// 	indent: 200,
+		// 	colorStart: 'black'
+		// })
 		.addTo(controller);
 		
 }
@@ -190,12 +189,12 @@ function pinArticleTextScene() {
 	
 		.setPin('.article--informations')
 		.setTween(pinArticle)
-		.addIndicators({
-			name:"Pin sur Article",
-			colorTrigger: 'red',
-			indent: 200,
-			colorStart: 'red'
-		})
+		// .addIndicators({
+		// 	name:"Pin sur Article",
+		// 	colorTrigger: 'red',
+		// 	indent: 200,
+		// 	colorStart: 'red'
+		// })
 		.addTo(controller);
 		
 }
@@ -221,12 +220,12 @@ function displayArticleImagesScene() {
 		})
 		.reverse(false)
 		.setTween(displayArticleImages)
-		.addIndicators({
-			name:"Pin sur IMAGE Article",
-			colorTrigger: 'green',
-			indent: 200,
-			colorStart: 'green'
-		})
+		// .addIndicators({
+		// 	name:"Pin sur IMAGE Article",
+		// 	colorTrigger: 'green',
+		// 	indent: 200,
+		// 	colorStart: 'green'
+		// })
 		.addTo(controller);
 
 
@@ -234,6 +233,28 @@ function displayArticleImagesScene() {
 	
 	}
 )}
+
+function displayFullScreenImage() {
+
+	const fullScreenImage = gsap.timeline({})
+
+	let fullScreenImagesScroll = new ScrollMagic.Scene({
+
+			triggerElement: ".full-screen",
+			duration: "200%",
+			triggerHook: 1
+
+		})
+		.setClassToggle(".full-screen", "fade-in")
+		// .addIndicators({
+		// 	name:"Full Screen Image",
+		// 	colorTrigger: 'purple',
+		// 	indent: 200,
+		// 	colorStart: 'purple'
+		// })
+		.addTo(controller);
+		
+}
 
 
 
@@ -307,6 +328,7 @@ function initAllScenes() {
 	imagesFadingScene();
 	pinArticleTextScene();
 	displayArticleImagesScene();
+	displayFullScreenImage();
 	
 }
 
