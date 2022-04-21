@@ -1,10 +1,12 @@
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 $whiteTypo: #fff;
 $redColor: #c03b54;
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 html {
 	scroll-behavior: smooth;
@@ -14,13 +16,8 @@ html {
 	0% { margin-top: 1px ;}
 	50% { margin-top: 9px ;}
 	100% { margin-top: 1px ;}
-  }
-
-
-* {
-    margin: 0;
-    padding: 0;
 }
+
 
 @mixin fadeIn {
 	
@@ -89,9 +86,11 @@ section {
 	color: $whiteTypo;
 
 	&--retour {
+
 		display:flex;
 
 		.Iconnavigationchevronbas {
+			cursor:pointer;
 			transform:rotate(90deg);
 			position:relative;
 			left:0;
@@ -99,6 +98,7 @@ section {
 		}
 
 		span {
+			cursor:pointer;
 			padding-left: 15px;
 			margin-top: 0;
 			margin-bottom: 0;
