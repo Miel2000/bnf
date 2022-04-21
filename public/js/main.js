@@ -1,3 +1,7 @@
+document.addEventListener('mousemove', sectionParallax);
+
+
+
 let controller = new ScrollMagic.Controller();
 
 
@@ -25,9 +29,9 @@ function headerScene() {
 	.to('.header--infos__fleche', 3, {
 		opacity: 0,
 		y:'50px'
-	}, "-=4.5")
+	}, "-=2.5")
 
-	let headerScene = new ScrollMagic.Scene({
+	let headerSceneScroll = new ScrollMagic.Scene({
 		triggerElement: "section--header",
 		duration: "100%",
 		triggerHook: 0.5
@@ -85,8 +89,8 @@ let step1Scene = new ScrollMagic.Scene({
 
 	const step2Timeline = gsap.timeline({})
 	let step2Scene = new ScrollMagic.Scene({
-		triggerElement: ".intro-step1--preambule",
-		duration: "80%",
+		triggerElement: ".intro-step1--infos",
+		duration: "245%",
 		})
 
 	.setClassToggle(".intro-step1--preambule-text", "fade-in")
@@ -102,7 +106,7 @@ let step1Scene = new ScrollMagic.Scene({
 
 // 3 Scene pin sur intro 
 
-function pinSurPreambule() {
+function pinSurPreambuleScene() {
 
 	const pinSurPreambule = gsap.timeline({})
 	
@@ -110,16 +114,16 @@ function pinSurPreambule() {
 	
 	let pinSurPreambuleScroll = new ScrollMagic.Scene({
 			triggerElement: ".intro-step1--infos",
-			duration: "300%",
+			duration: "260%",
 			triggerHook: 0
 			})
 	
 		.setPin('.intro-step1--infos')
 		.setTween(pinSurPreambule)
 		.addIndicators({
-			name:"Pin sur preambule",
+			name:"Pin sur Infos Top",
 			colorTrigger: 'black',
-			indent: 100,
+			indent: 200,
 			colorStart: 'black'
 		})
 		.addTo(controller);
@@ -127,38 +131,188 @@ function pinSurPreambule() {
 }
 
 
+function imagesFadingScene() {
+
+	$('.image-to-fade').each(function(index) {
+
+		const fixedIndex = index + 1
+	
+		const imagesFadeTimeline = gsap.timeline({})
+	
+		if ( fixedIndex % 2 == 0 ) {
+	
+			// Paire
+		
+			imagesFadeTimeline.from($(this), 3, {
+				autoAlpha: 0,
+				x:'100px',
+				ease: Linear.easeNoNe
+			})
+			
+		} else {
+	
+			// Impaire
+			imagesFadeTimeline.from($(this), 3, {
+				autoAlpha: 0,
+				x:'-100px',
+				ease: Linear.easeNoNe
+			})
+	
+		}
+	
+	
+	
+		let imagesFadeScene = new ScrollMagic.Scene({
+			triggerElement: this,
+		
+		})
+		.reverse(false)
+		.setTween(imagesFadeTimeline)
+		.addTo(controller)
+		
+	
+	})
+	
+}
 
 
-// Init
-headerScene();
-preambuleScene();
-pinSurPreambule();
+function pinArticleTextScene() {
+
+	const pinArticle = gsap.timeline({})
+
+	let pinSurArticleTextscroll = new ScrollMagic.Scene({
+
+			triggerElement: ".article--informations",
+			duration: "120%",
+			triggerHook: 0
+
+		})
+	
+		.setPin('.article--informations')
+		.setTween(pinArticle)
+		.addIndicators({
+			name:"Pin sur Article",
+			colorTrigger: 'red',
+			indent: 200,
+			colorStart: 'red'
+		})
+		.addTo(controller);
+		
+}
+
+function displayArticleImagesScene() {
+
+	$('.figure-image').each(function(index) {
+
+		const displayArticleImages = gsap.timeline({})
+					
+		displayArticleImages.from($(this), 3, {
+			autoAlpha: 0,
+			x:'100px',
+			ease: Linear.easeNoNe
+		})
+
+		let displayArticleImagesscroll = new ScrollMagic.Scene({
+
+			triggerElement: this,
+			duration: "120%",
+			triggerHook: 0.8
+
+		})
+		.reverse(false)
+		.setTween(displayArticleImages)
+		.addIndicators({
+			name:"Pin sur IMAGE Article",
+			colorTrigger: 'green',
+			indent: 200,
+			colorStart: 'green'
+		})
+		.addTo(controller);
+
+
+		console.log(this);
+	
+	}
+)}
 
 
 
-// const pinSurImages = gsap.timeline({})
+
+// Parallax
+
+function imagesParallax(e) {
+
+	document.querySelectorAll(".p-image").forEach(function(move){
+		let moving_value = move.getAttribute("data-value");
+
+		let x = (e.clientX * moving_value) / 250 ;
+		let y = (e.clientY * moving_value)  / 250 ;
+
+		move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+	})
+
+}
+
+function figcaptionParallax(e) {
+
+	document.querySelectorAll(".p-figcaption").forEach(function(move){
+		let moving_value = move.getAttribute("data-value");
+
+		let x = (e.clientX * moving_value) / 250 ;
+		let y = (e.clientY * moving_value)  / 250 ;
+
+		move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+	})
+
+}
+
+function doubleFlecheParallax(e) {
+
+	document.querySelectorAll(".doubleFleche").forEach(function(move){
+		let moving_value = move.getAttribute("data-value");
+
+		let x = (e.clientX * moving_value) / 250 ;
+		let y = (e.clientY * moving_value)  / 250 ;
+
+		move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+	})
+
+}
+
+// Init Parallax callback
+function sectionParallax(e) {
+	imagesParallax(e);
+	figcaptionParallax(e);
+	doubleFlecheParallax(e);
+}
+
+// var Scrollbar = window.Scrollbar;
+
+// let options = {
+// 	'damping': 0.03,
+// 	'alwaysShowTracks': true,
+// }
 
 
-// let pinSurImagesScroll = new ScrollMagic.Scene({
-// 	triggerElement: ".intro-step2-images",
-// 	duration: "100%",
-// 	triggerHook: 0.5
-// 	})
-
-// .addIndicators({
-// 	name:"Scene Images",
-// 	colorTrigger: 'purple',
-// 	indent: 100,
-// 	colorStart: 'purple'
-// })
-// .addTo(controller);
+// Scrollbar.init(document.querySelector('#scrollArea'), options);
 
 
+function initAllScenes() {
+	headerScene();
+	preambuleScene();
+	pinSurPreambuleScene();
+	imagesFadingScene();
+	pinArticleTextScene();
+	displayArticleImagesScene();
+	
+}
+
+// Init Scroll Scenes
+
+initAllScenes();
 
 
-
-// Init Scenes
-	// HeaderScene
-
-	// Step 1 Scene 
 

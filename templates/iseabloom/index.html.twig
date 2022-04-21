@@ -4,142 +4,246 @@
 
 {% block body %}
 <style>
- 
+
 </style>
+
 <div class="container">
 
-    {# HEADER #}
-    <section class="section--header">
+		{# HEADER #}
+		<section class="section--header">
 
-        <div class="header container">
+			<div class="header container">
 
-            <div class="header--retour">
+				<div class="header--retour">
 
-                <img src="{{ asset('build/images/bnf/icons/chevron/icon-navigation-chevron-bas.svg')}}" class="Iconnavigationchevronbas">
-                <span class="Retour-aux-Histoires">Retour aux Histoires courtes</span>
+					<img src="{{ asset('build/images/bnf/icons/chevron/icon-navigation-chevron-bas.svg')}}" class="Iconnavigationchevronbas">
+					<span class="Retour-aux-Histoires">Retour aux Histoires courtes</span>
 
-            </div>
+				</div>
 
-            <div class="header--image">
+				<div class="header--image">
 
-                <img class="header--image__select" src="{{ asset('build/images/bnf/header/bitmap.png')}}" />
+					<img class="header--image__select" src="{{ asset('build/images/bnf/header/bitmap.png')}}" />
 
-            </div>
-
-
-            <div class="header--infos col">
-
-                <div class="header--infos__en-images row">
-
-                    <span class="EN-IMAGES">en images</span>
-
-                </div>
-
-                <div class="header--infos__titre row">
-
-                    <span class="Maurice-Grin-vainqu">Maurice Garin, vainqueur du premier Tour de France</span>
-
-                </div>
-
-                <div class="header--infos__fleche row">
-
-                    <img src="{{ asset('build/images/bnf/icons/chevron/icon-navigation-chevron-bas.svg')}}" class="Iconnavigationchevronbas">
-
-                </div>
-
-                
+				</div>
 
 
-            </div>
-        </div>
-        
-    </section>
+				<div class="header--infos col">
 
-    {# INTRO STEP 1 (Préambule) & 2 (Images à afficher) #}
-    <section class="section--intro">
+					<div class="header--infos__en-images row">
 
-        <div class="intro-step1 col container center">
+						<span class="EN-IMAGES">en images</span>
 
-     
-            <div class="intro-step1--infos">
+					</div>
 
-                <div class="infos_recap">
+					<div class="header--infos__titre row">
 
-                        <span>Par Pierre-Emmanuel Jouanneau</span>
-                        
-                        <span class="separateur"></span>
+						<span class="Maurice-Grin-vainqu">Maurice Garin, vainqueur du premier Tour de France</span>
 
-                            <img class="chrono" src="{{ asset('build/images/bnf/icons/chrono/icon-contenu-time.svg')}}" class="Iconnavigationchevronbas">
-                        
-                        <span>25 min de lecture</span>
+					</div>
 
-                        <div class="Rectangle-Copy-3"></div>
-                </div>
+					<div class="header--infos__fleche row">
 
-                <div class="intro-step1--preambule d-flex justify-content-center">
+						<img src="{{ asset('build/images/bnf/icons/chevron/icon-navigation-chevron-bas.svg')}}" class="Iconnavigationchevronbas">
 
-                    <span class="intro-step1--preambule-text">
-                        Maecenas dui erat, pulvinar nec nunc tincidunt, rhoncus molestie augue. Integer at volutpat orci. <br /> <br />
-                        Morbi eu nisi eleifend, pretium lacus ut, consectetur diam. Sed sodales venenatis posuere. Proin mollis id velit vitae posuere. Nullam commodo ante a tellus finibus hendrerit. Phasellus id tincidunt tortor.
-                    </span>
+					</div>
 
-                </div>
-
-             
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="section--article">
-
-       <div class="intro-step2-images">
-
-            <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
-            <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
-            <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
-            <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
-            <img src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" >
-
-             
-        </div>
-
-        <div class="article--images">
-
-        </div>
-
-        <div class="article--informations">
-
-            <div class="article--information__titre">
-                <span class="">« Le petit ramoneur »</span>
-            </div>
-
-            <div class="article--information__text-1">
-                <span>Maurice Garin est né à Arvier en Italie le 3 Mars 1871. A quatorze ans, il est employé comme ramoneyr en savoie</span>
-            </div>
-
-            <div class="article--information__text-2">
-                <span></span>
-            </div>
-
-        </div>
-
-        <div class="article---images">
-
-            <figure>
-
-                <img src="{{ asset('build/images/bnf/article/lucien.jpg')}}" alt="">
-                <figcaption>Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
-
-            </figure>
+					
 
 
-             
-        </div>
+				</div>
+			</div>
+			
+		</section>
 
-    </section>
+		{# INTRO STEP 1 (Préambule)  #}
+		<section class="section--intro">
+
+			<div class="intro-step1 col container center">
+
+		
+				<div class="intro-step1--infos">
+
+					<div class="infos_recap">
+
+							<span>Par Pierre-Emmanuel Jouanneau</span>
+							
+							<span class="separateur"></span>
+
+								<img class="chrono" src="{{ asset('build/images/bnf/icons/chrono/icon-contenu-time.svg')}}" class="Iconnavigationchevronbas">
+							
+							<span>25 min de lecture</span>
+
+							<div class="Rectangle-Copy-3"></div>
+					</div>
+
+					<div class="intro-step1--preambule d-flex justify-content-center">
+
+						<span class="intro-step1--preambule-text">
+							Maecenas dui erat, pulvinar nec nunc tincidunt, rhoncus molestie augue. Integer at volutpat orci. <br /> <br />
+							Morbi eu nisi eleifend, pretium lacus ut, consectetur diam. Sed sodales venenatis posuere. Proin mollis id velit vitae posuere. Nullam commodo ante a tellus finibus hendrerit. Phasellus id tincidunt tortor.
+						</span>
+
+					</div>
+
+				
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+		{# INTRO STEP 2 (Images displaying on scroll)  #}
+		<section class="section--images">
+
+			<div class="intro-step2-images">
+
+				<div class="image-to-fade">
+
+					<figure>
+
+						<img class="doubleFleche" data-value="-6" src="{{ asset('build/images/bnf/icons/doubleFleche/icon-navigation-agrandir.svg')}}" alt="">
+						<img class="p-image" data-value="-8" src="{{ asset('build/images/bnf/article/lucien.jpg')}}" alt="">
+						<figcaption class="p-figcaption" data-value="-6">Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+					</figure>
+
+				</div>
+
+				<div class="image-to-fade">
+
+					<figure >
+
+						<img class="doubleFleche" data-value="6" src="{{ asset('build/images/bnf/icons/doubleFleche/icon-navigation-agrandir.svg')}}" alt="">
+						<img class="p-image" data-value="8" src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" alt="">
+						<figcaption  class="p-figcaption" data-value="6">Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+					</figure>
+
+				</div>
+
+
+				<div class="image-to-fade">
+
+					<figure>
+
+						<img class="doubleFleche" data-value="-2" src="{{ asset('build/images/bnf/icons/doubleFleche/icon-navigation-agrandir.svg')}}" alt="">
+						<img class="p-image" data-value="-4" src="{{ asset('build/images/bnf/article/lucien.jpg')}}" alt="">
+						<figcaption  class="p-figcaption" data-value="-3">Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+					</figure>
+
+				</div>
+
+
+				<div class="image-to-fade">
+
+					<figure >
+						<img class="doubleFleche" data-value="3" src="{{ asset('build/images/bnf/icons/doubleFleche/icon-navigation-agrandir.svg')}}" alt="">
+						<img class="p-image" data-value="5" src="{{ asset('build/images/bnf/intro/rectangle-copy-17.png')}}" alt="">
+						<figcaption  class="p-figcaption" data-value="3">Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+					</figure>
+
+				</div>
+
+
+				
+				<div class="image-to-fade">
+
+					<figure>
+
+						<img class="doubleFleche" data-value="-3" src="{{ asset('build/images/bnf/icons/doubleFleche/icon-navigation-agrandir.svg')}}" alt="">
+						<img class="p-image" data-value="-5" src="{{ asset('build/images/bnf/article/lucien.jpg')}}" alt="">
+						<figcaption  class="p-figcaption" data-value="-6">Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+					</figure>
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+
+		<section class="section--articles">
+
+
+			<div class="article--images">
+				
+				<figure class="figure-image">
+
+					<img src="{{ asset('build/images/bnf/article/lucien.jpg')}}" alt="">
+					<figcaption>Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+				</figure>
+
+				<figure class="figure-image">
+
+					<img src="{{ asset('build/images/bnf/article/cycliste.jpg')}}" alt="">
+					<figcaption>Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+				</figure>
+
+				<figure class="figure-image">
+
+					<img src="{{ asset('build/images/bnf/article/cycliste.jpg')}}" alt="">
+					<figcaption>Légende image lorem ipsum | © Bibliothèque nationale de France</figcaption>
+
+				</figure>
+
+
+				
+			</div>
+
+			<div class="article--informations">
+
+				<div class="article--informations--details__titre">
+
+					<span class="">« Le petit ramoneur »</span>
+
+				</div>
+
+				<div class="article--informations--details__text-1">
+
+					<span>Maurice Garin est né à Arvier en Italie le 3 Mars 1871. A quatorze ans, il est employé comme ramoneyr en savoie</span>
+
+				</div>
+
+
+				<div class="article--informations--details__text-2">
+					<span>Ce métier et sa petite taille (161cm pour 60kg) lui vaudront plutards Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</span>
+				</div>
+
+			</div>
+
+	
+
+		</section>
+		<section class="full-screen">
+
+
+
+			<img class="container-float" src="{{ asset('build/images/bnf/fullscreen/group.jpg')}}" alt="">
+
+			<div class="full-screen--infos">
+
+				<div class="container-icon">
+
+					<span>Des condition invraisemblables</span>
+
+					<img class="croix" src="{{ asset('build/images/bnf/icons/croix/icon-navigation-plus.svg')}}" alt="">
+
+				</div>
+
+			</div>
+
+		</section>
+
 
 </div>
 {% endblock %}
