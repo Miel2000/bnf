@@ -1,12 +1,9 @@
-console.log('Yyep ok ok og ogogogogog')
-
-
 let controller = new ScrollMagic.Controller();
 
 
 // // Init Timelines
 
-function headerTimeline() {
+function headerScene() {
 
 	const headerTimeline = gsap.timeline({})
 
@@ -46,7 +43,6 @@ function headerTimeline() {
 	.addTo(controller);
 
 
-
 }
 
 
@@ -70,14 +66,6 @@ function preambuleScene() {
 		opacity: 1,
 		y:'0px'
 	})
-	.fromTo('.intro-step1--preambule', 3, {
-		opacity: 0,
-		y:'20px'
-	}, 
-	{
-		opacity: 1,
-		y:'0px'
-	})
 
 let step1Scene = new ScrollMagic.Scene({
 		triggerElement: ".section--intro__infos",
@@ -85,13 +73,28 @@ let step1Scene = new ScrollMagic.Scene({
 		triggerHook: 0.9
 		})
 
-	.setPin('section--intro')
 	.setTween(step1Timeline)
 	.addIndicators({
-		name:"Step 1 ",
+		name:"Préambule",
 		colorTrigger: 'blue',
 		indent: 100,
 		colorStart: 'blue'
+	})
+	.addTo(controller);
+
+
+	const step2Timeline = gsap.timeline({})
+	let step2Scene = new ScrollMagic.Scene({
+		triggerElement: ".intro-step1--preambule",
+		duration: "80%",
+		})
+
+	.setClassToggle(".intro-step1--preambule-text", "fade-in")
+	.addIndicators({
+		name:"Display Préambule Text",
+		colorTrigger: 'maroon',
+		indent: 100,
+		colorStart: 'maroon'
 	})
 	.addTo(controller);
 
@@ -107,7 +110,7 @@ function pinSurPreambule() {
 	
 	let pinSurPreambuleScroll = new ScrollMagic.Scene({
 			triggerElement: ".intro-step1--infos",
-			duration: "30%",
+			duration: "300%",
 			triggerHook: 0
 			})
 	
@@ -127,29 +130,28 @@ function pinSurPreambule() {
 
 
 // Init
-headerTimeline();
+headerScene();
 preambuleScene();
 pinSurPreambule();
 
 
 
-const pinSurImages = gsap.timeline({})
+// const pinSurImages = gsap.timeline({})
 
 
-let pinSurImagesScroll = new ScrollMagic.Scene({
-	triggerElement: ".intro-step2-images",
-	duration: "100%",
-	triggerHook: 0.5
-	})
+// let pinSurImagesScroll = new ScrollMagic.Scene({
+// 	triggerElement: ".intro-step2-images",
+// 	duration: "100%",
+// 	triggerHook: 0.5
+// 	})
 
-.setTween(pinSurImages)
-.addIndicators({
-	name:"Pin sur Images",
-	colorTrigger: 'purple',
-	indent: 100,
-	colorStart: 'purple'
-})
-.addTo(controller);
+// .addIndicators({
+// 	name:"Scene Images",
+// 	colorTrigger: 'purple',
+// 	indent: 100,
+// 	colorStart: 'purple'
+// })
+// .addTo(controller);
 
 
 
